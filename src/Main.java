@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        countdown();
+        carres();
 
     }
 
@@ -233,9 +233,13 @@ public class Main {
 
     //exo 7.6
     public static void carres() {
-        for (int x = 0; x <= 10; x++) {
-            System.out.println(x + "\t" + (x * x));
-        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez saisir un entier : ");
+        float nombre = scanner.nextInt();
+
+        System.out.println(nombre + "\t" + (nombre * nombre));
+
     }
 
 }
