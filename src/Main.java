@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        discriminant();
+        min();
 
     }
 
@@ -149,4 +149,62 @@ public class Main {
             System.out.println("Les solutions sont " + x1 + " et " + x2);
         }
     }
+    /*
+        exo 7.2
+        Parite d'un nombre
+
+    */
+
+    public static void parite(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Veuillez saisir un nombre : ");
+        int nombre = scanner.nextInt();
+
+        if (nombre % 2 == 0){
+            System.out.println("Le nombre "+ nombre +" est pair.");
+        }
+        else{
+            System.out.println("Le nombre "+ nombre +" est impair.");
+        }
+    }
+
+    //creation fonction max()
+
+    public  static void max(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Veuillez saisir un nombre : ");
+        float nombre1 = scanner.nextFloat();
+
+        System.out.println("Veuillez saisir un autre nombre : ");
+        float nombre2 = scanner.nextFloat();
+
+        if  (nombre1 > nombre2){
+            System.out.println("Le nombre "+ nombre1 +" est plus grand que " + nombre2 + ".");
+        }
+
+        else{
+            System.out.println("Le nombre "+ nombre2 +" est plus grand que " + nombre1 + ".");
+        }
+    }
+
+    public  static void min(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Veuillez saisir un nombre : ");
+        float nombre1 = scanner.nextFloat();
+
+        System.out.println("Veuillez saisir un autre nombre : ");
+        float nombre2 = scanner.nextFloat();
+
+        if  (nombre1 < nombre2){
+            System.out.println("Le nombre "+ nombre1 +" est plus petit que " + nombre2 + ".");
+        }
+
+        else{
+            System.out.println("Le nombre "+ nombre2 +" est plus petit que " + nombre1 + ".");
+        }
+    }
+
 }
