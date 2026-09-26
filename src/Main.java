@@ -19,9 +19,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        min();
+        countdown();
 
     }
 
@@ -169,8 +169,7 @@ public class Main {
         }
     }
 
-    //creation fonction max()
-
+    //exo 7.3
     public  static void max(){
         Scanner scanner = new Scanner(System.in);
 
@@ -204,6 +203,38 @@ public class Main {
 
         else{
             System.out.println("Le nombre "+ nombre2 +" est plus petit que " + nombre1 + ".");
+        }
+    }
+
+    //exo 7.4
+    public static void factorielle(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Saisir un entier positif ou nul");
+        int n = scanner.nextInt();
+
+        int factorielle = 1;
+        // ici la ligne de base etait for (int i = 0; i <= n; i++) mais si l'on commence par 0
+        // la factorielle sera toujours 0 du coup on doit le modifier pour commencer par 1
+        for (int i = 1; i <= n; i++) {
+            factorielle *= i;
+        }
+        System.out.println(n + "! = " + factorielle);
+    }
+
+    //exo 7.5
+    public static void countdown() throws InterruptedException {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+            //Thread.sleep(1000);
+        }
+        System.out.println("BOOM !");
+    }
+
+    //exo 7.6
+    public static void carres() {
+        for (int x = 0; x <= 10; x++) {
+            System.out.println(x + "\t" + (x * x));
         }
     }
 
