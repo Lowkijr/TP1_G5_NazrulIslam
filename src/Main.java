@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        carres();
+        tableMultiplication();
 
     }
 
@@ -117,6 +117,7 @@ public class Main {
         System.out.println(operation);
     }
 
+    //exo 7.1
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
 
@@ -240,6 +241,24 @@ public class Main {
 
         System.out.println(nombre + "\t" + (nombre * nombre));
 
+    }
+
+    /* 7.7
+    1. Le plus approprie est une boucle for, car on connait à l'avance le nombre de valeurs : de 1 à 10.
+    3.
+        public static void tableMultiplication() {
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + "\t");
+            }
+        }
+    */
+    public static void tableMultiplication() {
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
     }
 
 }
